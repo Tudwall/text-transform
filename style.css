@@ -3,3 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#input {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
