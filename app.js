@@ -6,6 +6,7 @@ const result = document.querySelector("#result");
 // Functions
 function transformText(str) {
   return str
+    .toUpperCase()
     .split("")
     .map((char) => {
       const code = char.charCodeAt(char);
