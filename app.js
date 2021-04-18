@@ -11,7 +11,6 @@ function transformText(str, decalage) {
     .split("")
     .map((char) => {
       const code = char.charCodeAt(char);
-      // let decalage = offset.value.parseFloat();
       // Scans array to find the character's code.
       if (code < 65 || code > 90) {
         // Return an unconverted character.
@@ -26,8 +25,6 @@ function transformText(str, decalage) {
     })
     .join(""); // To get it back as a string.
 }
-
-// Get textarea content, modify it and inject it in a result div.
 
 // Event Listeners
 submit.addEventListener("click", function () {
