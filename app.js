@@ -27,6 +27,15 @@ function transformText(str, decalage) {
 }
 
 // Event Listeners
+offset.addEventListener("input", function () {
+  // RegEx tests if the string only contains numbers.
+  if (/^\d+$/.test(offset.value)) {
+    offset.style.color = "green";
+  } else {
+    offset.style.color = "red";
+  }
+});
+
 submit.addEventListener("click", function () {
   result.value = transformText(input.value, parseFloat(offset.value));
 });
