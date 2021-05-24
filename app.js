@@ -23,21 +23,6 @@ function transformText(str, offset) {
     .join(""); // To get it back as a string.
 }
 
-// Event Listeners
-// offset.addEventListener("input", function () {
-//   if (!/^\d+&/.test(offset.value)) {
-//     alert("The offset must be only numbers");
-//   }
-// });
-
-// submit.addEventListener("click", function () {
-//   if (/^\d+&/.test(offset.value)) {
-//     result.value = transformText(input.value, offset.value);
-//   } else {
-//     alert("The offset value must be numbers");
-//   }
-// });
-
 submit.addEventListener("click", function () {
   result.value = transformText(input.value, parseFloat(offset.value));
 });
