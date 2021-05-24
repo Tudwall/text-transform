@@ -9,14 +9,21 @@
 </head>
 <body>
     <div class="container">
-        <label for="offset">Décalage (chiffres uniquement): </label>
-        <input id="offset" type="text">
+        <div class="form-container">
+            <label for="offset">Offset: </label>
+            <input id="offset" type="number">
+        </div>
 
-        <label for="input">Write input text: </label>
-        <textarea id="input" rows="4" cols="50"></textarea>
-        <button class="submit">Submit</button>
-        <label for="result">Result: </label>
-        <textarea id="result" rows="4" cols="50"></textarea>
+        <div class="form-container">
+            <label for="input">Write input text: </label>
+            <textarea id="input" rows="4" cols="50"></textarea>
+            <button id="submit">Submit</button>
+        </div>
+        
+        <div class="form-container">
+            <label for="result">Result: </label>
+            <textarea id="result" rows="4" cols="50" readonly></textarea>
+        </div>
     </div>
 
     <script src="app.js"></script>
