@@ -12,7 +12,7 @@ function transformText(str, offset) {
     .map((char) => {
       // To check every character in the array.
       const code = char.charCodeAt(char);
-      if (code > 65 && code < 95) {
+      if (code < 65 || code > 95) {
         return String.fromCharCode(code); // Returns unchanged character.
       } else if (code < 78) {
         return String.fromCharCode(code + offset);
@@ -24,3 +24,20 @@ function transformText(str, offset) {
 }
 
 // Event Listeners
+// offset.addEventListener("input", function () {
+//   if (!/^\d+&/.test(offset.value)) {
+//     alert("The offset must be only numbers");
+//   }
+// });
+
+// submit.addEventListener("click", function () {
+//   if (/^\d+&/.test(offset.value)) {
+//     result.value = transformText(input.value, offset.value);
+//   } else {
+//     alert("The offset value must be numbers");
+//   }
+// });
+
+submit.addEventListener("click", function () {
+  result.value = transformText(input.value, parseFloat(offset.value));
+});
