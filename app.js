@@ -5,25 +5,22 @@ const result = document.querySelector("#result");
 const offset = document.querySelector("#offset");
 
 // Functions
+function transformText(str, offset) {
+  return str
+    .toUpperCase()
+    .split("")
+    .map((char) => {
+      // To check every character in the array.
+      const code = char.charCodeAt(char);
+      if (code > 65 && code < 95) {
+        return String.fromCharCode(code); // Returns unchanged character.
+      } else if (code < 78) {
+        return String.fromCharCode(code + offset);
+      } else {
+        return String.fromCharCode(code - offset);
+      }
+    })
+    .join(""); // To get it back as a string.
+}
 
 // Event Listeners
-
-/* Algorithme
-   Selectionner input, submit, result et offset
-
-   Récupérer le texte dans input
-   Récupérer le int dans offset
-
-   Mettre input en array (split)
-   Décaler tout les caractères dans la str selon offset(map pour appliquer à chaque char)
-   Remettre input en str
-   Retourner la str transformée dans result quand submit est clické
-*/
-
-// A-Z: 65-90
-// a-z: 97-122
-
-// Test texts
-// URYYB JBEYQ
-// BCRAPYNFFEBBZF
-// PRPV RFG ZBA PBQR FRPERG
