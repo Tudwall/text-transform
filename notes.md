@@ -17,6 +17,15 @@ Algorithme:
 
     - Quand submit est clické, mettre le résultat de la fonction dans result
 
+Problèmes:
+
+    Si code 85 avec offset 12, on va jusqu'à 90 puis retour à 65, puis on fait 65 + 12
+    AU LIEU DE
+    Si code 85 avec offset 12, on va jusqu'à 90 puis retour à 65, puis on fait 65 + 7
+
+    Solution?
+        Si code 85 avec offset 12, créer variable
+
 Table UTF-16:
 
     - A-Z: 65-90
