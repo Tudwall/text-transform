@@ -12,12 +12,12 @@ function transformText(str, offset) {
     .map((char) => {
       // To check every character in the array.
       const code = char.charCodeAt(char);
-      if (code < 65 || code > 95) {
-        return String.fromCharCode(code); // Returns unchanged character.
-      } else if (code < 78) {
+      if (code > 65 || code < 90) {
         return String.fromCharCode(code + offset);
-      } else {
-        return String.fromCharCode(code - offset);
+      } else if (code + offset > 90) {
+        return String.fromCharCode((code = 65 + offset));
+      } else if (code + offset < 65) {
+        return String.fromCharCode((code = 90 - offset));
       }
     })
     .join(""); // To get it back as a string.
